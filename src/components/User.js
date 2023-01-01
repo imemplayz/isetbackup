@@ -9,10 +9,13 @@ import {
 import { db } from "../firbase";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTrash,
+  faEllipsisVertical,
+  faEdit,
+  faSearch,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
 import UpdateUserModal from "./UpdateUserModal";
 
 const User = ({ name, eli }) => {
@@ -136,8 +139,11 @@ const User = ({ name, eli }) => {
                   {value.eliminations}
                   <div className="flex mr-3">
                     <div>
+                      <button className="hover:bg-blue-400/25 transition-all duration-200 text-blue-400 rounded-xl py-2 px-3 ml-5 text-bold">
+                        <FontAwesomeIcon icon={faEye} />
+                      </button>
                       <button
-                        className="hover:bg-yellow-400/25 transition-all duration-200 text-yellow-400 rounded-xl py-2 px-3 ml-5 text-bold"
+                        className="hover:bg-yellow-400/25 transition-all duration-200 text-yellow-400 rounded-xl py-2 px-3 text-bold"
                         onClick={() => {
                           setModalOpen(true);
                           setUserID(value.id);
@@ -146,7 +152,7 @@ const User = ({ name, eli }) => {
                         <FontAwesomeIcon icon={faEdit} />
                       </button>
                     </div>
-                    <button className="hover:bg-red-400/25 transition-all duration-200 text-red-400 rounded-xl py-2 px-3 ml-0 text-bold">
+                    <button className="hover:bg-red-400/25 transition-all duration-200 text-red-400 rounded-xl py-2 px-3 text-bold">
                       <FontAwesomeIcon icon={faTrash} />
                     </button>
                   </div>

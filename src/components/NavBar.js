@@ -96,24 +96,12 @@ function NavBar() {
             </div>
           )}
           {user && (
-            <Link to="/maps">
-              <div className="hidden lg:block bg-blue-500/25 dark:bg-blue-700/25 text-blue-700 px-2 py-1 rounded-full w-fit cursor-pointer">
-                Maps
-              </div>
-            </Link>
-          )}
-          {user && (
             <Link to="/team">
               <div className="hidden lg:block bg-blue-500/25 dark:bg-blue-700/25 text-blue-700 px-2 py-1 rounded-full w-fit cursor-pointer">
                 Staff
               </div>
             </Link>
           )}
-          <Link to="/scripts">
-            <div className="hidden lg:block bg-blue-500/25 dark:bg-blue-700/25 text-blue-700 px-2 py-1 rounded-full w-fit cursor-pointer">
-              Scripts
-            </div>
-          </Link>
         </div>
         <div className="hidden lg:flex items-center gap-5 bg-gray-200 dark:bg-gray-400 px-2 py-1 rounded-full focus-within:outline outline-4 outline-yellow-500/50 transition-all ease-in-out duration-100">
           <FontAwesomeIcon icon={faSearch} />
